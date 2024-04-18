@@ -3,7 +3,7 @@ import { useGlobalState } from "@/app/context/globalProvider";
 import { edit, trash } from "@/app/utils/Icons";
 import React from "react";
 import styled from "styled-components";
-import formatDate from "@/app/utils/formatDate";
+import formatDate from "@/app/utils/formatDate.js";
 
 interface Props {
   title: string;

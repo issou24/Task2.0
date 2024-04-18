@@ -4,8 +4,8 @@ import { ClerkProvider, auth } from "@clerk/nextjs";
 
 import "./globals.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import GlobalStyleProvider from "./providers/GlobalStyleProvider";
-import ContextProvider from "./providers/ContextProvider";
+import GlobalStyleProvider from "@/app/Providers/GlobalStyleProvider";
+import ContextProvider from "@/app/Providers/ContextProvider";
 import NextTopLoader from "nextjs-toploader";
 
 const nunito = Nunito({
