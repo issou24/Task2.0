@@ -1,13 +1,10 @@
-"use client";
 import { useGlobalState } from "@/app/context/globalProvider";
 import React from "react";
 import styled from "styled-components";
-import CreateContent from "../Modals/CreateContent";
-import TaskItem from "../TaskItem/TaskItem";
-import { add, plus } from "@/app/utils/Icons";
-import Modal from "../Modals/Modal";
-import ModalUpdated from "../Modals/UpdateModal";
-import UpdateContent from "../Modals/UpdateContent";
+import UpdateContent from "../Components/Modals/UpdateContent";
+import TaskItem from "../Components/TaskItem/TaskItem";
+import { add, edit, plus } from "@/app/utils/Icons";
+import ModalUpdated from "../Components/Modals/UpdateModal";
 
 interface Props {
   title: string;
@@ -15,16 +12,12 @@ interface Props {
 }
 
 function Tasks({ title, tasks }: Props) {
-  const { theme, isLoading, openModal, modal, modalUpdated } = useGlobalState();
+  const { theme, isLoading, openModalUpdated, modalUpdated } = useGlobalState();
 
   return (
     <TaskStyled theme={theme}>
-      {modal && <Modal content={<CreateContent />} />}
       {modalUpdated && <ModalUpdated content={<UpdateContent />} />}
-
-      <button className="btn-rounded" onClick={openModal}>
-        {plus}
-      </button>
+      <h1>{title}</h1>
 
       <div className="tasks grid">
         {tasks.map((task) => (
@@ -37,10 +30,6 @@ function Tasks({ title, tasks }: Props) {
             id={task.id}
           />
         ))}
-        <button className="create-task" onClick={openModal}>
-          {add}
-          Add New Task
-        </button>
       </div>
     </TaskStyled>
   );
