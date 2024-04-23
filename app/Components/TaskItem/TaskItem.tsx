@@ -53,9 +53,7 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
         <button
           className="edit"
           onClick={() => {
-            console.log("debut");
             openModalUpdated();
-            console.log("fin");
           }}
         >
           {edit}

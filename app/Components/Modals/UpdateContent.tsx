@@ -8,7 +8,6 @@ import Button from "../Button/Button";
 import { add } from "@/app/utils/Icons";
 
 function UpdateContent() {
-  console.log("test");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");

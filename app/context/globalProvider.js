@@ -35,9 +35,7 @@ export const GlobalProvider = ({ children }) => {
   };
 
   const openModalUpdated = () => {
-    console.log("debut");
     setModalUpdated(true);
-    console.log("fermetur");
   };
 
   const closeModalUpdated = () => {
