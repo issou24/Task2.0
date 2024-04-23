@@ -4,17 +4,17 @@ import React from "react";
 import styled from "styled-components";
 
 interface Props {
-  content: React.ReactNode;
+  contentUpdated: React.ReactNode;
 }
 
-function ModalUpdated({ content }: Props) {
+function ModalUpdated({ contentUpdated }: Props) {
   const { closeModalUpdate } = useGlobalState();
 
   const { theme } = useGlobalState();
   return (
     <ModalStyledUpdated theme={theme}>
       <div className="modal-overlay" onClick={closeModalUpdate}></div>
-      <div className="modal-content">{content}</div>
+      <div className="modal-content">{contentUpdated}</div>
     </ModalStyledUpdated>
   );
 }

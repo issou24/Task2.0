@@ -49,6 +49,7 @@ function UpdateContent() {
       important,
     };
 
+    console.log("put");
     try {
       const res = await axios.put("/api/tasks", task);
 

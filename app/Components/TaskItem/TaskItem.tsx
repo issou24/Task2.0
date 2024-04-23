@@ -53,7 +53,14 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
         <button
           className="edit"
           onClick={() => {
-            openModalUpdated();
+            const task = {
+              title,
+              description,
+              date,
+              id,
+              isCompleted,
+            };
+            openModalUpdated(task);
           }}
         >
           {edit}
